@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Card(props) {
     
@@ -18,4 +18,4 @@ function Card(props) {
     )
 }
 
-export default Card
+export default Card;
