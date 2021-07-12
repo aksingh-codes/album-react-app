@@ -8,7 +8,7 @@ function App() {
     const [albumData, setAlbumData] = useState([]);
 
     const fetchData = () => {
-        return fetch("http://jsonplaceholder.typicode.com/album/2/photos")
+        return fetch("https://jsonplaceholder.typicode.com/album/2/photos")
               .then((response) => response.json())
               .then((data) => {
                 setAlbumData(data);
