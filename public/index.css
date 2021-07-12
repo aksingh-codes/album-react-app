@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.fetch-btn{
+   margin: 20px 0 50px;
+   color: #000;
+   padding: 7px 15px;
+   font-size: 1.5rem;
+   font-weight: 500;
+   border: #000 solid 1px;
+   border-radius: 4px;
+   background: none;
+   transition: ease-out 0.4s;
+}
+.fetch-btn:hover{
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+ }
+
+.album-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.card{
+    text-align: center;
+    background: rgb(252, 240, 240);
+    border-radius: 8px;
+    box-shadow: #000 0px 0px 1px 0px;
+    cursor: pointer;
+}
+
+.card-img{
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title{
+    padding: 8px;
+    font-weight: 300;
+}
+
+.total-cards{
+    font-weight: 500;
+    font-size: 2rem;
+    color: rgb(252, 240, 240);
+    margin: 50px 0 20px;
+}
+
+@media screen and (max-width:900px) {
+    .album-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width:600px) {
+    .album-grid{
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width:400px) {
+    .album-grid{
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 3px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
