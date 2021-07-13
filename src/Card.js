@@ -5,7 +5,7 @@ function Card(props) {
     const data = props.data;
     
     return (
-        <div className="card" onClick={
+        <div id={`card-${data.id}`} className="card" onClick={
             () => {
                 props.removeCard(data.id)
             }

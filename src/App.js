@@ -18,17 +18,29 @@ function App() {
     
 
     const removeCard = (id)=> {
-        setAlbumData(
-            albumData.filter(
-            data => (data.id !== id)
-        ))
+        
+        const card = document.getElementById(`card-${id}`);
+        card.style.opacity="0";
+        card.style.transition="1s";
+
+        setTimeout(
+            () => {
+                setAlbumData(
+                    albumData.filter(data => (data.id !== id))
+                );
+            }
+            ,
+            1000);    
     }
     
     return (
         <div style={{textAlign:"center"}}>
+            <div className="fetch-container-nav">
             <button className="fetch-btn" onClick={fetchData}>
                 Fetch
             </button>
+            </div>
+            
             <div className="album-grid">
             {
                 albumData.map(
@@ -41,11 +53,13 @@ function App() {
             </div>
 
             {
-                <p className="total-cards">
-                    {
-                        "Total Cards : " + albumData.length
-                    }
-                </p>
+                <div className="total-cards">
+                    
+                        <p>
+                        {"Total Cards : " + albumData.length}
+                        </p>
+                    
+                </div>
             }
             
         </div>
